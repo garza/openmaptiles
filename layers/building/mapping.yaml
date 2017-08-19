@@ -47,12 +47,6 @@ tables:
     - name: levels
       key: levels
       type: string
-    - name: name
-      key: name
-      type: string
-    - name: ref
-      key: ref
-      type: string
     - name: min_level
       key: min_level
       type: string
@@ -155,12 +149,6 @@ tables:
       from_member: true
     - name: type
       type: member_type
-    - name: name
-      key: name
-      type: string
-    - name: ref
-      key: ref
-      type: string
     mapping:
       type: [street]
     type: relation_member
@@ -249,12 +237,6 @@ tables:
       from_member: true
     - name: type
       type: member_type
-    - name: name
-      key: name
-      type: string
-    - name: ref
-      key: ref
-      type: string
     mapping:
       type: [associatedStreet]
     type: relation_member
@@ -334,12 +316,6 @@ tables:
     - name: relmin_level
       key: min_level
       type: string
-    - name: name
-      key: name
-      type: string
-    - name: ref
-      key: ref
-      type: string
     - name: member
       type: member_id
     - name: index
@@ -413,12 +389,6 @@ tables:
       from_member: true
     - name: type
       type: member_type
-    - name: name
-      key: name
-      type: string
-    - name: ref
-      key: ref
-      type: string
     mapping:
       type: [multipolygon]
     filters:

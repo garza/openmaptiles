@@ -1,0 +1,27 @@
+
+tables:
+
+  # etldoc: imposm3 -> osm_housenumber_point
+  buildinginfo_point:
+    type: geometry
+    fields:
+    - name: osm_id
+      type: id
+    - name: geometry
+      type: geometry
+    - name: name
+      key: name
+      type: string
+    - name: ref
+      key: ref
+      type: string
+    mapping:
+      building:part:
+      - __any__
+      building:
+      - __any__
+    filters:
+      reject:
+        building: ["no","none","No"]
+        building:part: ["no","none","No"]
+    type: polygon
