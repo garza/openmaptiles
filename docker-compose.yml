@@ -108,9 +108,10 @@ services:
     - postgres_conn
     env_file: .env
     environment:
-      #BBOX: "8.25,46.97,9.58,47.52"
-      #BBOX: "5.97,45.75,10.7,47.72"
-      BBOX: ${BBOX}
+      OSM_MAX_TIMESTAMP : "2017-04-19T20:14:29Z"
+      OSM_AREA_NAME: "UTSA All Campuses"
+      BBOX: "-98.636627,29.388457,-98.471832,29.595252"
+      #BBOX: ${BBOX}
       MIN_ZOOM: ${MIN_ZOOM}
       MAX_ZOOM: ${MAX_ZOOM}
   postserve:
