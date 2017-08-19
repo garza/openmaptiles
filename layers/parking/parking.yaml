@@ -1,0 +1,14 @@
+layer:
+  id: "parking"
+  description: |
+      Parking is used to describe surface lots use of land by humans.
+  buffer_size: 4
+  fields:
+    datasource:
+      geometry_field: geometry
+      query: (SELECT geometry, amenity, name, parking FROM layer_parking(!bbox!, z(!scale_denominator!))) AS t
+schema:
+  - ./parking.sql
+datasources:
+  - type: imposm3
+    mapping_file: ./mapping.yaml
