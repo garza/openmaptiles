@@ -5,9 +5,12 @@ layer:
   datasource:
     query: (SELECT geometry, amenity, name, parking FROM layer_parking(!bbox!, z(!scale_denominator!))) AS t
   fields:
-    amenity: | Parking amenity
-    name: | parking lot name
-    parking: | parking lot type
+    amenity: |
+    Parking amenity
+    name: |
+    Parking lot name
+    parking: |
+    Parking lot type
 schema:
   - ./parking.sql
 datasources:
